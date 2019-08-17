@@ -1,4 +1,5 @@
-class Post(object):
+import Database
+class post(object):
 	def _init_(self,blog_id,title,content,author,date,idno):
 		self.blog_id=blog_id
 		self.title=title
