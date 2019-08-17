@@ -1,11 +1,11 @@
 import Database
 class post(object):
-	def __init__(self,blog_id,title,content,author,date,idno):
+	def _init_(self,blog_id,title,content,author,created_date,idno):
 		self.blog_id=blog_id
 		self.title=title
 		self.content=content
 		self.author=author
-		self.created_date= date
+		self.created_date= created_date
 		self.id= idno
 	def save_to_mongo(self):
 		Database.insert(collection='posts',data=self.json())
