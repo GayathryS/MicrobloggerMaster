@@ -1,5 +1,6 @@
 {% extends "base.html" %}
-{% base content %}
+{% block content %}
 <h1>Hello {{ email }} </h1>
-
+<a href="/blogs"><button>View Blogs</button></a>
+<a href="/logout"><button>Logout</button></a>
 {% endblock %}

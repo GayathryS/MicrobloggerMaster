@@ -1,8 +1,8 @@
 {% extends "base.html" %}
-{% base content %}
+{% block content %}
 <div class="container">
-	<h2>{{blog title }}</h2>
-	<button class="btn btn-primary"><a href="/posts/new/{{blog_id}}" ></a>New post</button>
+	<h2>{{ blog_title }}</h2>
+	<a href="/posts/new/{{blog_id}}"><button class="btn btn-primary">New post</button></a>
 	{% if posts |length >0 %}
 	{% for post in posts %}
 	<h3>{{post.title}}</h3>

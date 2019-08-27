@@ -35,8 +35,8 @@ class Post(object):
                    content=post_data['content'],
                    author=post_data['author'],
                    created_date=post_data['created_date'],
-                   _id=post_data['id'])
+                   _id=post_data['_id'])
 
-    @staticmethod
-    def from_blog(blog_id):
-        return [post for post in Database.find('posts', {'blog_id': blog_id})]
+    @classmethod
+    def from_blog(cls, blog_id):
+        return [cls(**post) for post in Database.find('posts', {'blog_id': blog_id})]
